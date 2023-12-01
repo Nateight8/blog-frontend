@@ -22,6 +22,17 @@ const commentOperations = {
       }
     `,
   },
+
+  Subscriptions: {
+    commentCreated: gql`
+      subscription CommentCreated {
+        commentCreated {
+          id
+          comment
+        }
+      }
+    `,
+  },
 };
 
 export default commentOperations;

@@ -39,6 +39,7 @@ export default function InputForm() {
   function onSubmit(formData: z.infer<typeof FormSchema>) {
     const { comment } = formData;
     commentMutation({ variables: { comment } });
+    form.reset();
   }
 
   return (
